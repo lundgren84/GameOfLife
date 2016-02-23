@@ -10,6 +10,7 @@ namespace TheGameOfLife
     {
         static void Main(string[] args)
         {
+            //shirzads comment!
         }
     }
 }
