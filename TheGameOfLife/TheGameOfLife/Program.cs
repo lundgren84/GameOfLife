@@ -10,10 +10,11 @@ namespace TheGameOfLife
     {
         static void Main(string[] args)
         {
-            int[,] GameBoard = new int[100, 100];
+            Cell cell = new Cell();
+            Cell[,] GameBoard = new Cell[100, 100];
             GameMethods gamemethods = new GameMethods();
-            gamemethods.GetRandom(GameBoard);
-            gamemethods.PrintBoard(GameBoard);
+            gamemethods.GetRandom(GameBoard,cell);
+            gamemethods.PrintBoard(GameBoard,cell);
             Console.ReadKey();
         }
     }

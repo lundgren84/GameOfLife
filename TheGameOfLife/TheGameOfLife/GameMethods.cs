@@ -9,14 +9,14 @@ namespace TheGameOfLife
     class GameMethods
     {
         Random random = new Random();
-        public void PrintBoard(int[,] GameBoard)
+        public void PrintBoard(Cell[,] GameBoard,Cell cell)
         {
 
             for (int y = 0; y < 100; y++)
             {
                 for (int x = 0; x < 100; x++)
                 {
-                    if (GameBoard[x, y] == 1) { Console.Write("#"); }
+                    if (GameBoard[x, y] == cell) { Console.Write("#"); }
                     else { Console.Write(" "); }
                 }
             }
@@ -25,14 +25,14 @@ namespace TheGameOfLife
         /// Adds Cells to game
         /// </summary>
         /// <param name="GameBoard"></param>
-        public void GetRandom(int[,] GameBoard)
+        public void GetRandom(Cell[,] GameBoard,Cell cell)
         {
             int WhileGo = 0;
             while (WhileGo < 20)
             {
                 int X = random.Next(0, 100);
                 int Y = random.Next(0, 100);
-                GameBoard[X, Y] = 1;
+                GameBoard[X, Y] = cell;
                 WhileGo++;
             }
         }
