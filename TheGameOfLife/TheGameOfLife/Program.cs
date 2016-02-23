@@ -13,6 +13,7 @@ namespace TheGameOfLife
             int[,] GameBoard = new int[200, 200];
 
             //hej hampus
+            // hej igen :)
         }
     }
 }
