@@ -11,6 +11,8 @@ namespace TheGameOfLife
         static void Main(string[] args)
         {
             int[,] GameBoard = new int[200, 200];
+
+            //hej hampus
         }
     }
 }
