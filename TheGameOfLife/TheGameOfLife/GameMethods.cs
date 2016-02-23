@@ -16,7 +16,7 @@ namespace TheGameOfLife
             {
                 for (int x = 0; x < 100; x++)
                 {
-                    if (GameBoard[x, y] == 1) { Console.Write("¤"); }
+                    if (GameBoard[x, y] == 1) { Console.Write("#"); }
                     else { Console.Write(" "); }
                 }
             }
