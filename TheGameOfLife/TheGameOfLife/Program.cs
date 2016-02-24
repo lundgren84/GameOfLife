@@ -10,15 +10,10 @@ namespace TheGameOfLife
     {
         static void Main(string[] args)
         {
-            Cell cell = new Cell();
-            Cell[,] GameBoard = new Cell[50, 50];
-            GameBoard = cell.FillWithCells(GameBoard);
-            //-----------------------------------------------
-
-
-            GameBoard = cell.GetRandom(GameBoard);
-            cell.PrintBoard(GameBoard, cell);
-
+            TheGameBoard thegameboard = new TheGameBoard();
+            thegameboard.FillBoard();
+            thegameboard.PutRandomCellToLife();
+            thegameboard.PrintBoard();
             Console.ReadKey();
         }
     }
