@@ -13,8 +13,18 @@ namespace TheGameOfLife
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
             thegameboard.PutRandomCellToLife();
-            thegameboard.PrintBoard();
-            Console.ReadKey();
+            thegameboard.AddACellZone();
+
+            DateTime now = new DateTime();
+            now = DateTime.Now;
+
+            while (now < DateTime.Now)
+            {
+                thegameboard.PrintBoard();
+                thegameboard.NextBoard();
+                Console.ReadKey();
+                now.AddMilliseconds(300);
+            }
         }
     }
 }
