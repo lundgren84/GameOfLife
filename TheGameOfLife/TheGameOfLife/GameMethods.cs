@@ -6,35 +6,19 @@ using System.Threading.Tasks;
 
 namespace TheGameOfLife
 {
-    class GameMethods
+   public static class GameMethods
     {
-        Random random = new Random();
-        public void PrintBoard(Cell[,] GameBoard,Cell cell)
+       public static int Randomize()
         {
-
-            for (int y = 0; y < 100; y++)
-            {
-                for (int x = 0; x < 100; x++)
-                {
-                    if (GameBoard[x, y] == cell) { Console.Write("#"); }
-                    else { Console.Write(" "); }
-                }
-            }
+            Random random = new Random();
+           int tal = random.Next(0, 50);
+            return tal;
         }
-        /// <summary>
-        /// Adds Cells to game
-        /// </summary>
-        /// <param name="GameBoard"></param>
-        public void GetRandom(Cell[,] GameBoard,Cell cell)
-        {
-            int WhileGo = 0;
-            while (WhileGo < 20)
-            {
-                int X = random.Next(0, 100);
-                int Y = random.Next(0, 100);
-                GameBoard[X, Y] = cell;
-                WhileGo++;
-            }
-        }
+        
+        
+       
+        
+       
+       
     }
 }
