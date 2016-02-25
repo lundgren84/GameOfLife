@@ -43,7 +43,7 @@ namespace TheGameOfLife
             {
                 for (int x = 0; x < 50; x++)
                 {
-                    if (GameBoard[y, x].Life == true) { ConsoleColor Olle = Methods.CollorChanger(GameBoard[y, x].Collor); Console.ForegroundColor = Olle; Console.Write("O"); Console.ForegroundColor = ConsoleColor.White; GameBoard[y, x].Collor++; }
+                    if (GameBoard[y, x].Life == true) { ConsoleColor Olle = Methods.CollorChanger(GameBoard[y, x].Collor); Console.BackgroundColor = Olle; Console.Write(" "); Console.BackgroundColor = ConsoleColor.Black; GameBoard[y, x].Collor++; }
                     else if (GameBoard[y, x].Life == false) { Console.Write(" "); }
                 }
                 Console.Write("\n");
@@ -143,7 +143,14 @@ namespace TheGameOfLife
             GameBoard[3, 36].Life = true;
             GameBoard[4, 36].Life = true;
         }
-
+        public void SpaceShip()
+        {
+            GameBoard[1, 3].Life = true;
+            GameBoard[2, 3].Life = true;
+            GameBoard[3, 3].Life = true;
+            GameBoard[3, 2].Life = true;
+            GameBoard[2, 1].Life = true;        
+        }
 
     }
 }
