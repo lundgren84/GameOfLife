@@ -66,15 +66,12 @@ namespace TheGameOfLife
             {
                  while (now < DateTime.Now)
                 {
-
                     Console.Clear();
-
-                    thegameboard.PrintBoard();
-                   
+                    thegameboard.PrintBoard();                   
                     thegameboard.NextBoard();
-                    now = DateTime.Now.AddSeconds(0.3);
-                    
 
+                    now = DateTime.Now.AddSeconds(0.2);
+              
                 }
             }
         }
