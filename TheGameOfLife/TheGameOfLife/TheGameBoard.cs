@@ -39,6 +39,7 @@ namespace TheGameOfLife
         }
         public void PrintBoard()
         {
+            Console.Clear();
             for (int y = 0; y < 25; y++)
             {
                 for (int x = 0; x < 50; x++)
@@ -49,12 +50,13 @@ namespace TheGameOfLife
                 Console.Write("\n");
             }
         }
-        public void NextBoard()
+        public void NextDoorCell()
         {
             for (int y = 0; y < 25; y++)
             {
                 for (int x = 0; x < 50; x++)
                 {
+                    GameBoard[y, x]._nextDoor = 0;
                     if (y != 0 && GameBoard[y - 1, x].Life == true) { GameBoard[y, x]._nextDoor = +1; }
                     if (y != 0 && x != 49 && GameBoard[y - 1, x + 1].Life == true) { GameBoard[y, x]._nextDoor = +1; }
                     if (y != 0 && x != 0 && GameBoard[y - 1, x - 1].Life == true) { GameBoard[y, x]._nextDoor = +1; }
@@ -73,9 +75,10 @@ namespace TheGameOfLife
             {
                 for (int x = 0; x < 50; x++)
                 {
-                    if (GameBoard[y, x].Life == true && GameBoard[y, x]._nextDoor == 2 || GameBoard[y, x]._nextDoor == 3) { GameBoard[y, x]._nextDoor = 0; GameBoard[y, x].Color = +1; }
-                    if (GameBoard[y, x].Life == true && GameBoard[y, x]._nextDoor < 2 || GameBoard[y, x]._nextDoor > 3) { GameBoard[y, x].Life = false; GameBoard[y, x]._nextDoor = 0; GameBoard[y, x].Color = 1; }
-                    if (GameBoard[y, x].Life == false && GameBoard[y, x]._nextDoor == 3) { GameBoard[y, x].Life = true; GameBoard[y, x]._nextDoor = 0; }
+                    if (GameBoard[y, x].Life == true && GameBoard[y, x]._nextDoor == 3) {  GameBoard[y, x].Color = +1; }
+                   else if  (GameBoard[y, x].Life == true && GameBoard[y, x]._nextDoor == 2) { GameBoard[y, x].Color = +1; }
+                   else if (GameBoard[y, x].Life == true && GameBoard[y, x]._nextDoor < 2 || GameBoard[y, x]._nextDoor > 3) { GameBoard[y, x].Life = false; GameBoard[y, x].Color = 1; }
+                   else if (GameBoard[y, x].Life == false && GameBoard[y, x]._nextDoor == 3) { GameBoard[y, x].Life = true; }
                 }
             }
         }
@@ -93,6 +96,11 @@ namespace TheGameOfLife
         }
         public void GliderGun()
         {
+            GameBoard[0, 0].Life = true;
+            GameBoard[1, 0].Life = true;
+            GameBoard[1, 1].Life = true;
+            GameBoard[0, 1].Life = true;
+
             GameBoard[5, 1].Life = true;
             GameBoard[5, 2].Life = true;
             GameBoard[6, 1].Life = true;
@@ -132,6 +140,7 @@ namespace TheGameOfLife
         }
         public void SpaceShip()
         {
+            
             GameBoard[1, 3].Life = true;
             GameBoard[2, 3].Life = true;
             GameBoard[3, 3].Life = true;

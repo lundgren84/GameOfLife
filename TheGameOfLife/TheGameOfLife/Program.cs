@@ -68,11 +68,10 @@ namespace TheGameOfLife
             {
                  while (now < DateTime.Now)
                 {
-                    Console.Clear();
                     thegameboard.PrintBoard();                   
-                    thegameboard.NextBoard();
+                    thegameboard.NextDoorCell();
                     thegameboard.ChangeBoard();
-
+                    Console.ReadKey();
                     now = DateTime.Now.AddSeconds(0.2);
                     
                 }
