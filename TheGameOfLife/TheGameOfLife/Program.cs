@@ -56,11 +56,14 @@ namespace TheGameOfLife
             //thegameboard.PutRandomCellToLife();
             thegameboard.AddACellZone();
 
+            Console.WriteLine("Press a key to start Game Of Life");
+            Console.ReadKey();
+
             DateTime now = new DateTime();
             now = DateTime.Now;
             while (true)
             {
-                while (now < DateTime.Now)
+                 while (now < DateTime.Now)
                 {
                     Console.Clear();
 
