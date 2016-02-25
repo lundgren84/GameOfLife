@@ -8,7 +8,7 @@ namespace TheGameOfLife
 {
     class Program
     {
-        public void NextBoard(Cell[,]GameBoard)
+        public void NextBoard(Cell[,] GameBoard)
         {
             int die = 0;
             int live = 0;
@@ -62,10 +62,12 @@ namespace TheGameOfLife
             {
                 while (now < DateTime.Now)
                 {
-                    thegameboard.DoIt();
-                    now.AddMilliseconds(300);
-
+                    Console.Clear();
+                    thegameboard.PrintBoard();
+                    thegameboard.NextBoard();
+                    now = DateTime.Now.AddSeconds(0.3);
                     Console.ReadKey();
+
                 }
             }
         }
