@@ -54,10 +54,11 @@ namespace TheGameOfLife
             
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
-            //thegameboard.PutRandomCellToLife();
+           // thegameboard.PutRandomCellToLife();
             //thegameboard.AddACellZone();
             thegameboard.GliderGun();
             //thegameboard.SpaceShip();
+            //thegameboard.GliderGun20();
 
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();
@@ -71,8 +72,8 @@ namespace TheGameOfLife
                     thegameboard.PrintBoard();                   
                     thegameboard.NextDoorCell();
                     thegameboard.ChangeBoard();
-                    Console.ReadKey();
-                    now = DateTime.Now.AddSeconds(0.2);
+
+                    now = DateTime.Now.AddSeconds(0.10);
                     
                 }
             }
