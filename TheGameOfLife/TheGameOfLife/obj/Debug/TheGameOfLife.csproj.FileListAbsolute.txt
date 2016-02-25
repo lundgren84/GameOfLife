@@ -5,3 +5,9 @@ C:\Users\Hampus Lundgren\Documents\GitHub\GameOfLife\GameOfLife\TheGameOfLife\Th
 C:\Users\Hampus Lundgren\Documents\GitHub\GameOfLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.csprojResolveAssemblyReference.cache
 C:\Users\Hampus Lundgren\Documents\GitHub\GameOfLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.exe
 C:\Users\Hampus Lundgren\Documents\GitHub\GameOfLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.pdb
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\bin\Debug\TheGameOfLife.exe.config
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\bin\Debug\TheGameOfLife.exe
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\bin\Debug\TheGameOfLife.pdb
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.csprojResolveAssemblyReference.cache
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.exe
+C:\Users\Shiroo\Documents\GitHub\GameOFLife\GameOfLife\TheGameOfLife\TheGameOfLife\obj\Debug\TheGameOfLife.pdb
