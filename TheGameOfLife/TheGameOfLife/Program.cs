@@ -54,12 +54,24 @@ namespace TheGameOfLife
             
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
-           // thegameboard.PutRandomCellToLife();
+            thegameboard.PutRandomCellToLife();
             //thegameboard.AddACellZone();
-            thegameboard.GliderGun();
-            //thegameboard.SpaceShip();
-            //thegameboard.GliderGun20();
-
+            //Console.WriteLine("How manny Gunners you wanna put out?");
+            //int nr;
+            //int.TryParse(Console.ReadLine(), out nr);
+            //while(nr > 0)
+            //    {
+            //    Console.WriteLine("Y-axel: ");
+            //    int nr1;
+            //    int.TryParse(Console.ReadLine(), out nr1);
+            //    Console.WriteLine("X-axel: ");
+            //    int nr2;
+            //    int.TryParse(Console.ReadLine(), out nr2);
+                //thegameboard.GliderGun();
+                //thegameboard.SpaceShip();
+            //    thegameboard.GliderGun20(nr1,nr2);
+            //    nr--;
+            //}
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();
 
@@ -69,7 +81,8 @@ namespace TheGameOfLife
             {
                  while (now < DateTime.Now)
                 {
-                    thegameboard.PrintBoard();                   
+                    thegameboard.ReadBoard();
+                    thegameboard.PrintBoard();               
                     thegameboard.NextDoorCell();
                     thegameboard.ChangeBoard();
 
