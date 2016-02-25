@@ -8,6 +8,7 @@ namespace TheGameOfLife
 {
     class Cell
     {
+        public int Collor { get; set; }
         private bool life;
 
         public bool Life
@@ -15,8 +16,11 @@ namespace TheGameOfLife
             get { return life; }
             set { life = value; }
         }
-        public Cell(bool Life)
-        { this.life = Life; }
+        public Cell(bool Life,int Collor)
+        {
+            this.life = Life;
+            this.Collor = Collor;
+        }
 
     }
 }
