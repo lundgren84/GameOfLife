@@ -53,7 +53,7 @@ namespace TheGameOfLife
         {
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
-            thegameboard.PutRandomCellToLife();
+            //thegameboard.PutRandomCellToLife();
             thegameboard.AddACellZone();
 
             DateTime now = new DateTime();
@@ -63,10 +63,12 @@ namespace TheGameOfLife
                 while (now < DateTime.Now)
                 {
                     Console.Clear();
+
                     thegameboard.PrintBoard();
+                   
                     thegameboard.NextBoard();
                     now = DateTime.Now.AddSeconds(0.3);
-                    Console.ReadKey();
+                    
 
                 }
             }
