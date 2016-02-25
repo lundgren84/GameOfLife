@@ -51,6 +51,7 @@ namespace TheGameOfLife
         }
         static void Main(string[] args)
         {
+            
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
             //thegameboard.PutRandomCellToLife();
@@ -65,6 +66,7 @@ namespace TheGameOfLife
             {
                  while (now < DateTime.Now)
                 {
+
                     Console.Clear();
 
                     thegameboard.PrintBoard();

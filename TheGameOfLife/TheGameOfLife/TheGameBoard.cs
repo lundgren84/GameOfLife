@@ -20,7 +20,7 @@ namespace TheGameOfLife
             {
                 for (int x = 0; x < 50; x++)
                 {
-                    Cell cell = new Cell(false);
+                    Cell cell = new Cell(false,1);
                     GameBoard[y, x] = cell;
                 }
             }
@@ -44,7 +44,7 @@ namespace TheGameOfLife
                 for (int x = 0; x < 50; x++)
                 {
                     if (y == 0 || y == 24|| x == 0 || x == 49) { Console.BackgroundColor = ConsoleColor.Gray; Console.Write(" "); Console.BackgroundColor = ConsoleColor.Black; }   
-                   else if (GameBoard[y, x].Life == true) {Console.ForegroundColor= ConsoleColor.Red; Console.Write("¤"); Console.ForegroundColor = ConsoleColor.White; }
+                   else if (GameBoard[y, x].Life == true)  { ConsoleColor  Olle = Methods.CollorChanger(GameBoard[y, x].Collor);Console.ForegroundColor = Olle; Console.Write("¤"); Console.ForegroundColor = ConsoleColor.White; GameBoard[y, x].Collor++; }
                    else if (GameBoard[y, x].Life == false) { Console.Write(" "); }
                 }
                 Console.Write("\n");
@@ -52,8 +52,6 @@ namespace TheGameOfLife
         }
         public void NextBoard()
         {
-            
-            
             int y = 0;
             int x = 0;
             for (y = 0; y < 25; y++)
@@ -73,8 +71,8 @@ namespace TheGameOfLife
                         if (x > 0 && GameBoard[y, x - 1].Life == true) { live++; }
 
                         if (live == 2 || live == 3) { GameBoard[y, x].Life = true; }
-                        if (live < 2) { GameBoard[y, x].Life = false; }
-                        if (live > 3) { GameBoard[y, x].Life = false; }
+                        if (live < 2) { GameBoard[y, x].Life = false; GameBoard[y, x].Collor = 1; }
+                        if (live > 3) { GameBoard[y, x].Life = false; GameBoard[y, x].Collor = 1; }
                         
                     }
                     if (GameBoard[y, x].Life == false)
