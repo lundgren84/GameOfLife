@@ -8,13 +8,15 @@ namespace TheGameOfLife
 {
     class Cell
     {
-        private bool liv;
+        private bool life;
 
-        public bool Liv
+        public bool Life
         {
-            get { return liv; }
-            set { liv = value; }
+            get { return life; }
+            set { life = value; }
         }
+        public Cell(bool Life)
+        { this.life = Life; }
 
     }
 }
