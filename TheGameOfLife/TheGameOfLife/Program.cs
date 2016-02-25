@@ -55,7 +55,8 @@ namespace TheGameOfLife
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
             //thegameboard.PutRandomCellToLife();
-            thegameboard.AddACellZone();
+            //thegameboard.AddACellZone();
+            thegameboard.GliderGun();
 
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();

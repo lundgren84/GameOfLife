@@ -16,5 +16,11 @@ namespace TheGameOfLife
             else { collor = ConsoleColor.Red; }
             return collor; 
         }
+        public static void Menu()
+        {
+            Console.WriteLine("Start Menu");
+            Console.WriteLine("1. \n###\n# #\n###");
+            Console.WriteLine();
+        }
     }
 }
