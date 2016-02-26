@@ -9,7 +9,7 @@ namespace TheGameOfLife
     public class TheGameBoard
     {
         Cell[,] GameBoard;
-        int X = 100;
+        int X = 50;
         int Y = 25;
         string PrintedGame = String.Empty;
         public TheGameBoard()
@@ -27,36 +27,41 @@ namespace TheGameOfLife
                 }
             }
         }
-        public void PutRandomCellToLife()
+        public void PutRandomCellToLife(int go)
         {
-            int go = 0;
+
             Random random = new Random();
-            while (go< 2000)
+            while (0 < go)
             {
                 int y = random.Next(0, Y);
                 int x = random.Next(0, X);
 
                 GameBoard[y, x].Life = true;
-                go++;
+                go--;
             }
         }
         public void ReadBoard()
         {
-             PrintedGame = String.Empty;
+            
+            PrintedGame = String.Empty;
             Console.Clear();
             for (int y = 0; y < Y; y++)
             {
                 for (int x = 0; x < X; x++)
                 {
-                    if (GameBoard[y, x].Life == true) { ConsoleColor Olle = Methods.CollorChanger(GameBoard[y, x].Color); Console.BackgroundColor = Olle; PrintedGame +="O"; Console.BackgroundColor = ConsoleColor.Black; ; }
-                    else if (GameBoard[y, x].Life == false) { PrintedGame += " "; }
-                }
-                PrintedGame += "\n";
+                    if (GameBoard[y, x].Life == true)
+                    { 
+                        PrintedGame += "¤";
+                    }
+                    else if (GameBoard[y, x].Life == false) { PrintedGame +=" "; }
+                    }
+                    PrintedGame += "\n";
+                } 
             }
-            Console.Write(PrintedGame);
-        }
         public void PrintBoard()
-        { Console.Write(PrintedGame); }
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(PrintedGame);
+        }
         public void NextDoorCell()
         {
             for (int y = 0; y < Y; y++)
@@ -101,13 +106,8 @@ namespace TheGameOfLife
             GameBoard[7, 6].Life = true;
             GameBoard[7, 7].Life = true;
         }
-        public void GliderGun20(int a,int b)
-        {         
-            GameBoard[a + 0, b + 0].Life = true;
-            GameBoard[a + 1, b + 0].Life = true;
-            GameBoard[a + 11, b + 1].Life = true;
-            GameBoard[a + 10, b + 1].Life = true;
-
+        public void GliderGun20(int a, int b)
+        {
             GameBoard[a + 15, b + 1].Life = true;
             GameBoard[a + 15, b + 2].Life = true;
             GameBoard[a + 16, b + 1].Life = true;
@@ -149,11 +149,6 @@ namespace TheGameOfLife
         }
         public void GliderGun()
         {
-            GameBoard[0, 0].Life = true;
-            GameBoard[1, 0].Life = true;
-            GameBoard[1, 1].Life = true;
-            GameBoard[0, 1].Life = true;
-
             GameBoard[5, 1].Life = true;
             GameBoard[5, 2].Life = true;
             GameBoard[6, 1].Life = true;

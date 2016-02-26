@@ -8,6 +8,7 @@ namespace TheGameOfLife
 {
     class Program
     {
+
         public void NextBoard(Cell[,] GameBoard)
         {
             int die = 0;
@@ -51,27 +52,16 @@ namespace TheGameOfLife
         }
         static void Main(string[] args)
         {
-            
+
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
-            thegameboard.PutRandomCellToLife();
+
+             thegameboard.PutRandomCellToLife(1000);
             //thegameboard.AddACellZone();
-            //Console.WriteLine("How manny Gunners you wanna put out?");
-            //int nr;
-            //int.TryParse(Console.ReadLine(), out nr);
-            //while(nr > 0)
-            //    {
-            //    Console.WriteLine("Y-axel: ");
-            //    int nr1;
-            //    int.TryParse(Console.ReadLine(), out nr1);
-            //    Console.WriteLine("X-axel: ");
-            //    int nr2;
-            //    int.TryParse(Console.ReadLine(), out nr2);
-                //thegameboard.GliderGun();
-                //thegameboard.SpaceShip();
-            //    thegameboard.GliderGun20(nr1,nr2);
-            //    nr--;
-            //}
+            // thegameboard.GliderGun();
+            // thegameboard.SpaceShip();
+            // thegameboard.GliderGun20(1,2);
+
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();
 
@@ -79,15 +69,16 @@ namespace TheGameOfLife
             now = DateTime.Now;
             while (true)
             {
-                 while (now < DateTime.Now)
+                while (now < DateTime.Now)
                 {
+                    Console.Clear();
                     thegameboard.ReadBoard();
-                    thegameboard.PrintBoard();               
+                    thegameboard.PrintBoard();
                     thegameboard.NextDoorCell();
                     thegameboard.ChangeBoard();
 
-                    now = DateTime.Now.AddSeconds(0.10);
-                    
+                    now = DateTime.Now.AddSeconds(0.15);
+
                 }
             }
         }
