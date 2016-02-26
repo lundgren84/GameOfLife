@@ -61,7 +61,7 @@ namespace TheGameOfLife
             // thegameboard.GliderGun();
             // thegameboard.SpaceShip();
             // thegameboard.GliderGun20(1,2);
-
+            //shirzad bara kommenterar!
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();
 
