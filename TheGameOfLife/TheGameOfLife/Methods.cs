@@ -10,11 +10,11 @@ namespace TheGameOfLife
     {
         public static ConsoleColor CollorChanger(int ChangeCollor)
         {
-            ConsoleColor collor = new ConsoleColor();
-            if (ChangeCollor == 1) { collor = ConsoleColor.Yellow; }
-            if (ChangeCollor == 2) { collor = ConsoleColor.Green; }
-            else { collor = ConsoleColor.Red; }
-            return collor; 
+            ConsoleColor color = new ConsoleColor();
+            if (ChangeCollor == 1) { color = ConsoleColor.Red; }
+           
+            else { color = ConsoleColor.DarkRed; }
+            return color; 
         }
         public static void Menu()
         {

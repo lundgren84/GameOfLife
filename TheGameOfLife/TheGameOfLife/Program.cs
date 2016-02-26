@@ -8,6 +8,7 @@ namespace TheGameOfLife
 {
     class Program
     {
+
         public void NextBoard(Cell[,] GameBoard)
         {
             int die = 0;
@@ -51,13 +52,15 @@ namespace TheGameOfLife
         }
         static void Main(string[] args)
         {
-            
+
             TheGameBoard thegameboard = new TheGameBoard();
             thegameboard.FillBoard();
-            //thegameboard.PutRandomCellToLife();
+
+             thegameboard.PutRandomCellToLife(1000);
             //thegameboard.AddACellZone();
-            thegameboard.GliderGun();
-            //thegameboard.SpaceShip();
+            // thegameboard.GliderGun();
+            // thegameboard.SpaceShip();
+            // thegameboard.GliderGun20(1,2);
 
             Console.WriteLine("Press a key to start Game Of Life");
             Console.ReadKey();
@@ -66,15 +69,16 @@ namespace TheGameOfLife
             now = DateTime.Now;
             while (true)
             {
-                 while (now < DateTime.Now)
+                while (now < DateTime.Now)
                 {
                     Console.Clear();
-                    thegameboard.PrintBoard();                   
-                    thegameboard.NextBoard();
+                    thegameboard.ReadBoard();
+                    thegameboard.PrintBoard();
+                    thegameboard.NextDoorCell();
                     thegameboard.ChangeBoard();
 
-                    now = DateTime.Now.AddSeconds(0.2);
-                    
+                    now = DateTime.Now.AddSeconds(0.15);
+
                 }
             }
         }
